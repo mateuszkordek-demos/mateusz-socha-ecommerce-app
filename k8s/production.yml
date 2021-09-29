@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mateusz-socha-website
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: mateusz-socha-website
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mateusz-socha-website
+spec:
+  selector:
+    matchLabels:
+      app: mateusz-socha-website
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: mateusz-socha-website
+    spec:
+      containers:
+      - name: mateusz-socha-website
+        image: registry.gitlab.com/enlighten1/mateusz_socha-website:latest-production
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "50m"
+          limits:
+            memory: "300Mi"
+            cpu: "300m"
+      imagePullSecrets:
+        - name: regcred
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: mateusz-socha-website-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+  - hosts: 
+    - mateuszsocha.com
+    secretName: mateusz-socha-website-tls
+  rules:
+  - host: mateuszsocha.com
+    http:
+      paths:
+      - backend:
+          serviceName: mateusz-socha-website
+          servicePort: 80

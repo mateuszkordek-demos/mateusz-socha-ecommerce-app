@@ -1,0 +1,211 @@
+.v-application
+    font-family: sofia-pro, sans-serif !important
+    font-weight: 400 !important
+    font-style: normal
+    overflow: hidden
+    // background-color: transparent !important
+
+.nuxt-link-exact-active, .nuxt-link-active
+    text-decoration: none !important
+
+.container
+    @media (min-width: 1904px)
+        max-width: 1185px !important
+
+.v-card
+    border-radius: 10px !important
+
+.v-list-item__title
+    font-size: 16px !important
+
+.v-input
+    border-radius: 10px !important
+    @media( max-width: 599.98px )
+        font-size: 15px !important
+
+.v-text-field--outlined > .v-input__control > .v-input__slot
+    background: #fff
+    // border-color: red !important
+
+.v-dialog
+    box-shadow: none !important
+
+.v-menu__content
+    border-radius: 10px !important
+
+// .v-input__slot
+//     background-color: #EBEBEB !important
+//     // border-radius: 10px !important
+
+//     .v-label
+//         color: #717CB7BF !important
+//         @media( max-width: 599.98px )
+//             font-size: 15px !important
+
+// .theme--light.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state)
+//     >.v-input__control
+//         >.v-input__slot
+//             fieldset
+//                 border: #EBEBEB !important
+            //     background-color: #EBEBEB !important
+
+// .v-select__slot
+//     .v-input__icon
+//         .v-icon
+//             color: #717CB7BF !important
+//     .v-label
+//         color: #717CB7BF !important
+
+.v-navigation-drawer
+    width: 100% !important
+
+html
+    font-size: 16px !important
+
+    @media( max-width: 599.98px )
+        font-size: 15px !important
+
+h1
+    font-size: 35px
+    line-height: 1.3
+
+    @media(max-width: 959.98px)
+        font-size: 30px
+    @media( max-width: 599.98px )
+        font-size: 25px
+
+h2
+    font-size: 27px
+    line-height: 1.3
+
+    @media(max-width: 959.98px)
+        font-size: 23px
+
+    @media( max-width: 599.98px )
+        font-size: 20px
+
+h3
+    font-size: 22px
+
+    @media(max-width: 959.98px)
+        font-size: 20px
+
+    @media( max-width: 599.98px )
+        font-size: 18px
+
+h4
+    font-size: 18px
+    line-height: 1.3
+
+    @media(max-width: 959.98px)
+        font-size: 16px
+
+    @media( max-width: 599.98px )
+        font-size: 15px
+
+p
+    color: #444
+    line-height: 1.7
+
+.section-padding
+    padding-top: 60px
+    padding-bottom: 60px
+
+    @media(max-width: 1903.98px)
+        padding-top: 40px
+        padding-bottom: 40px
+
+    @media(max-width: 959.98px)
+        padding-top: 30px
+        padding-bottom: 20px
+
+    @media( max-width: 599.98px )
+        padding-top: 0
+        padding-bottom: 20px
+
+.darker-bg
+    background-color: #f8f8f8
+
+.z-index-5
+    z-index: 5
+    position: relative
+
+.quantity-btns
+    border: thin solid rgba(0, 0, 0, 0.42)
+    border-radius: 10px
+    .quantity
+        background-color: rgba(0, 0, 0, 0)
+    .v-btn
+        min-width: 40px !important
+
+        span
+            font-size: 18px !important
+            line-height: 10px !important
+            padding-bottom: 5px !important
+        &.minus
+            border-radius: 10px 0 0 10px !important
+        &.plus
+            border-radius: 0 10px 10px 0 !important
+        &.v-btn--disabled
+            background-color: rgba(0, 0, 0, .5) !important
+
+.price-html
+    display: flex
+    ins
+        text-decoration: none
+        font-size: 25px
+    del
+        order: 1
+        color: #dd2c00
+        margin-left: 5px
+
+    &.small
+        max-width: 100px
+        ins
+            font-size: 16px
+
+        del
+            font-size: 13px
+
+        @media(max-width: 575.98px)
+            // flex-direction: column
+            margin-top: 5px
+            ins
+                // order: 2
+                // font-size: 12px
+            del
+                font-size: 10px
+                line-height: 10px
+                margin-left: auto
+        @media(max-width: 355px)
+            del
+                display: none
+
+.container
+    // overwriting
+    @media(min-width: 1904px)
+        max-width: initial !important
+
+    @media(min-width: 1264px)
+        max-width: initial !important
+
+    @media(min-width: 960px)
+        max-width: initial !important
+
+    // new media queries
+    @media(min-width: 1200px)
+        max-width: 1185px !important
+
+    @media(max-width: 1199.98px)
+        max-width: 900px !important
+
+    @media(max-width: 991.98px)
+        padding: 12px 20px !important
+
+    @media(max-width: 767.98px)
+        padding: 12px !important
+
+    @media(max-width: 575.98px)
+
+.test
+    border: 1px solid red

@@ -1,0 +1,45 @@
+build-development:
+    image: docker:19.03.13
+    stage: build
+    services:
+        - docker:19.03.13-dind
+    script:
+        - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+        - docker build -f Dockerfile-dev --tag $CI_REGISTRY_IMAGE:latest-development .
+        - docker push $CI_REGISTRY_IMAGE:latest-development
+    only:
+        - master
+
+# deploy-development:
+#     image: 
+#         name: bitnami/kubectl
+#         entrypoint: [""]
+#     stage: deploy
+#     script:
+#         - kubectl rollout restart deployment mateusz-socha-website-dev --namespace=development
+#     only:
+#         - master
+
+build-production:
+    image: docker:19.03.13
+    stage: build
+    services:
+        - docker:19.03.13-dind
+    script:
+        - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+        - docker build -f Dockerfile-prod --tag $CI_REGISTRY_IMAGE:latest-production .
+        - docker push $CI_REGISTRY_IMAGE:latest-production
+        - docker build -f Dockerfile-liveprev --tag $CI_REGISTRY_IMAGE:latest-liveprev .
+        - docker push $CI_REGISTRY_IMAGE:latest-liveprev
+    only:
+        - deploy-production
+
+deploy-production:
+    image: 
+        name: bitnami/kubectl
+        entrypoint: [""]
+    stage: deploy
+    script:
+        - kubectl rollout restart deployment mateusz-socha-website --namespace=production
+    only:
+        - deploy-production

@@ -1,0 +1,36 @@
+{
+    "name": "mateusz_socha-website",
+    "version": "1.0.0",
+    "description": "Mateusz Socha website",
+    "author": "Mateusz Kordek",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "serve": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate"
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.12.2",
+        "@nuxtjs/gtm": "^2.4.0",
+        "moment": "^2.29.1",
+        "nuxt": "^2.14.7",
+        "nuxt-breakpoint": "^1.0.0",
+        "nuxt-breakpoints": "^1.1.9",
+        "nuxt-facebook-pixel-module": "^1.5.0",
+        "nuxt-material-design-icons": "^1.0.4",
+        "vue-light-gallery": "^1.0.1",
+        "vue-parallax-js": "^0.2.3",
+        "vue-youtube": "^1.4.0"
+    },
+    "devDependencies": {
+        "@mdi/font": "^4.8.95",
+        "@nuxtjs/vuetify": "^1.11.2",
+        "nodemon": "^1.18.9",
+        "pug": "^2.0.4",
+        "pug-plain-loader": "^1.0.0",
+        "sass": "^1.29.0",
+        "sass-loader": "^7.2.0"
+    }
+}

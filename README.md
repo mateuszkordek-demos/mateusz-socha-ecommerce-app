@@ -9,7 +9,7 @@ Wykorzystane technologie:
 - Wordpress jako headless CMS - do zarządzania treściami na stronie
 - WooCommerce - do zarządzania stanami magazynowymi
 
-    > **Uwaga:** Repozytoria w **mateuszkordek-demos** są repozytoriami oczyszczonymi między innymi z danych wrażliwych, z tego powodu nie zawierają oryginalnej historii zmian z procesu developmentu. Repozytoria są przygotowane do uruchomienia lokalnie.
+    > **Uwaga:** Repozytoria w **mateuszkordek-portfolio** są repozytoriami oczyszczonymi między innymi z danych wrażliwych, z tego powodu nie zawierają oryginalnej historii zmian z procesu developmentu. Repozytoria są przygotowane do uruchomienia lokalnie.
 
 ## Uruchomienie aplikacji
 

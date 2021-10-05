@@ -2,7 +2,7 @@
 
 ## Opis
 
-Strona ze sklepem internetowym wykonana dla polskiego standupera Mateusza Sochy.
+Strona ze sklepem internetowym wykonana dla komika Mateusza Sochy.
 
 Wykorzystane technologie:
 - Nuxt.js
